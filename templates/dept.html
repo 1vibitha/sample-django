@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">sl no</th>
+        <th scope="col">dept name</th>
+        <th scope="col">dept description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in dep %}
+        <tr>
+    <td>{{ forloop.counter }}</td>
+        <td>{{ i.dept_name }}</td>
+        <td>{{ i.dept_description }}</td>
+    </tr>
+        {% endfor %}  
+
+    </tbody>
+  </table>
+{% endblock content %}
