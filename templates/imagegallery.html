@@ -1,0 +1,31 @@
+
+<h1>Insert Image</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+
+<br>
+<div class="container">
+    
+<table border='1'>
+  
+
+        {% for x in img %}
+        {% if forloop.first %}
+        <tr>
+            {% endif %}
+            <td><img src="{{ x.Image.url }}" width="250" height="250"><br>
+        {{ x.caption }}</td>
+        {% if forloop.counter|divisibleby:3 %}
+        
+    </tr>
+    <tr>
+        {% endif %}
+
+    {% endfor %}
+</table>
+
+</div>
+

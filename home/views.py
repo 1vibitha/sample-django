@@ -49,9 +49,9 @@ def booking(request):
             return render(request,'booking.html')
     else:
         form=Bookingform()
-        dic_form={
+    dic_form={
             'form':form
         }
-        return render(request,'booking.html',dic_form)
+    return render(request,'booking.html',dic_form)
 
 

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'logp',
     'imagegallery',
     'home',
     'django.contrib.admin',
